@@ -39,7 +39,7 @@ If the input string is `S8D3HQS3CQ`, it has Two pairs. the output is `2P`.
 ruby pkhparser.rb
 ```
 
-### Pipe
+### Pipeline
 
 ```
 echo "D4C4C8D8S4" | ruby pkhparser.rb
