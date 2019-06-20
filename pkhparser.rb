@@ -5,18 +5,25 @@ def parse_hand( input_line )
         "C"  => 0, "D" => 20, "H" => 40, "S" => 60,
         "T" => 10, "J" => 11, "Q" => 12, "K" => 13, "A" => 14
     }
+    hand = []
     rank = []
     pairs = 0
     three_of_kinds = 0
     cards = input_line.scan(/([SHDC])(10|[2-9TJQKA])/)
     
-    if cards.size < 5 
-        return "invalid input" 
+    if cards.size != 5 
+        return "invalid input"
     end
 
     cards.each{ |c|
         rank.push( c[1].match(/\d+/)?(c[1].to_i):valueref[c[1]] )
+        hand.push( valueref[c[0]] + rank[rank.size - 1] )
     }
+
+    if hand.uniq.length != cards.length
+        return "duplicated cards. don't cheat"
+    end
+
     rank = rank.sort
     idx = 0
     while idx < 4
