@@ -42,11 +42,11 @@ ruby pkhparser.rb
 ### Pipe
 
 ```
-echo "D4C4C8D8S4" | ruby pkhparser.h
+echo "D4C4C8D8S4" | ruby pkhparser.rb
 ```
 
 Or
 
 ```
-cat hands.txt | ruby pkhparser.h
+cat hands.txt | ruby pkhparser.rb
 ```
