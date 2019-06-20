@@ -2,6 +2,8 @@
 
 Simplified poker hand parser for SEZAX's qualification test
 
+To run it online, visit: https://repl.it/repls/DigitalLightpinkRuntimes
+
 ## Problem
 
 Given an input of 5 strings that each represent a playing card. Output a valid poker hand.
