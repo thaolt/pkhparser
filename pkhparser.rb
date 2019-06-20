@@ -9,6 +9,7 @@ def parse_hand( input_line )
     rank = []
     pairs = 0
     three_of_kinds = 0
+    input_line = input_line.upcase
     cards = input_line.scan(/([SHDC])(10|[2-9TJQKA])/)
     
     if cards.size != 5 
